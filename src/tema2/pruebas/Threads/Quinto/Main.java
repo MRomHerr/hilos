@@ -1,5 +1,8 @@
-package tema2.pruebas.procesos2;
+package tema2.pruebas.Threads.Quinto;
 
+
+import tema2.pruebas.procesos2.Hilo;
+import tema2.pruebas.procesos2.HiloRunnable;
 
 public class Main {
     public static void main(String[] args) {

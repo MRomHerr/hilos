@@ -10,7 +10,7 @@ package tema2.RA2.Ejercicio4;
  */
 public class Colaborar {
     private static final int numhilos = 10; // Número de hilos que se crearán
-    private static final String archivo = "C:\\Users\\marco\\IdeaProjects\\DAM2\\Servicios\\src\\tema2\\RA2\\Ejercicio4\\miFichero.txt"; // Ruta del archivo donde se generarán las palabras
+    private static final String archivo = "C:\\Users\\marco\\IdeaProjects\\hilos\\src\\tema2\\RA2\\Ejercicio4\\miFichero.txt"; // Ruta del archivo donde se generarán las palabras
 
     /**
      * Metodo principal que crea y ejecuta varios hilos que generaran palabras
