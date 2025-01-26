@@ -1,0 +1,74 @@
+Ejercicio 3.1
+Realiza un programa servidor TCP que acepte dos clientes. Muestra por cada cliente conectado sus puertos local y remoto.
+Crea también el programa cliente que se conecte a ese servidor. Muestra los puertos locales y remotos a los que está conectado su socket, y la dirección IP de la máquina remota a la que se conecta.
+
+Ejercicio 3.2
+Crea un programa servidor que envíe un mensaje en mayúsculas a otro programa cliente, y el programa cliente devuelva el mensaje en minúsculas.
+
+Ejercicio 3.3
+Escribe un programa cliente que solicite por teclado un número entero y se lo envíe al servidor. El servidor le devolverá el cuadrado del número.
+
+Ejercicio 3.4
+Escribe un programa servidor que pueda atender hasta 3 clientes. Debe enviar a cada cliente un mensaje indicando el número de cliente que es (1, 2 o 3). El cliente mostrará el mensaje recibido.
+Modifica el programa para que pueda atender N clientes, donde N será un parámetro definido en el servidor.
+
+Ejercicio 3.5
+Usando sockets TCP, realiza un programa cliente que introduzca cadenas por teclado hasta que el usuario escriba un asterisco (*). Las cadenas se enviarán a un servidor, que las mostrará en pantalla y las devolverá al cliente.
+El cliente debe recibir el mensaje devuelto y mostrarlo también.
+
+Ejercicio 3.6
+Crea un programa cliente usando sockets UDP que envíe el texto escrito desde la entrada estándar al servidor. El servidor devolverá la cadena en mayúsculas.
+El proceso finaliza cuando el cliente introduzca un asterisco (*).
+Implementa un tiempo de espera de 5000 ms usando el método setSoTimeout(5000) para controlar si el cliente no recibe datos. Si el tiempo expira, se lanzará una excepción indicando que el paquete se ha perdido.
+
+Ejercicio 3.7
+Realiza un servidor multicast usando sockets UDP. El servidor debe tener:
+
+Un campo de texto para escribir mensajes que se enviarán a todos los clientes.
+Un área de texto donde se muestran los mensajes enviados.
+Un botón "Enviar" para enviar mensajes al grupo multicast.
+Un botón "Salir" para finalizar la ejecución del servidor.
+El cliente pedirá un nombre al usuario y mostrará en un área de texto los mensajes enviados por el servidor. Un botón "Salir" finalizará la ejecución del cliente.
+
+Ejercicio 3.8
+Crea una clase Java llamada Numeros con los atributos:
+
+int numero
+long cuadrado
+long cubo
+El cliente solicitará un número entero, lo enviará al servidor como un objeto Numeros, y repetirá mientras el número sea mayor que 0.
+El servidor calculará el cuadrado y el cubo del número, modificará el objeto y lo enviará de vuelta al cliente. Si el número recibido es menor o igual a 0, el servidor finalizará.
+
+Ejercicio 3.9
+Usando sockets UDP, realiza un programa servidor que espere un datagrama de un cliente.
+El cliente enviará un objeto Persona inicializado previamente. El servidor modificará los datos del objeto Persona y lo devolverá al cliente.
+Ambos programas deben visualizar los datos del objeto antes y después de ser enviados.
+
+Ejercicio 3.10
+Realiza el Ejercicio 3.8 utilizando sockets UDP. El cliente enviará un número como un objeto Numeros, el servidor calculará el cuadrado y el cubo, y devolverá el objeto al cliente.
+
+Ejercicio 3.11
+Crea una clase Curso con los atributos:
+
+String id
+String descripcion
+Crea una clase Alumno con los atributos:
+
+String idAlumno
+String nombre
+Curso curso
+int nota
+Crea un programa servidor UDP que inicialice un array de 5 objetos Alumno con datos ficticios.
+El servidor recibirá un idAlumno del cliente y devolverá el objeto correspondiente. Si no encuentra el alumno, devolverá un objeto con información indicando que no existe.
+El cliente solicitará un idAlumno, enviará la consulta, y visualizará los datos del alumno recibido.
+
+Ejercicio 3.12
+Prueba los programas cliente y servidor de chat en diferentes máquinas.
+
+Ejercicio 3.13
+Crea una clase ManejadorCliente que implemente Runnable con un atributo Socket.
+
+En el método run, crea objetos DataInputStream y DataOutputStream para gestionar los flujos de información.
+El cliente enviará cadenas de texto, que serán procesadas por el servidor eliminando las vocales. El resultado se devolverá al cliente.
+El servidor atenderá múltiples clientes usando hilos con la clase ManejadorCliente. Abrirá el puerto 11223 y estará en un bucle infinito.
+El cliente solicitará texto al usuario y enviará las cadenas al servidor hasta introducir un asterisco (*).
